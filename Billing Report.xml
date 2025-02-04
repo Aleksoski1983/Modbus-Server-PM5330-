@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="LineItemResultSetTable">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>4.00042in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.29903in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.28198in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.31858in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Label">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!LineItemLabel.Value</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Label</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <LeftBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>=Code.AlternateColor("White", Code.ReportResources.LightColor(), True)</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ReadingDisplay.Value</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>=Code.AlternateColor("White", Code.ReportResources.LightColor(), False)</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ModifierDisplay.Value</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <RightBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>=Code.AlternateColor("White", Code.ReportResources.LightColor(), False)</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Value">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!LineItemValue.Value</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontSize>8pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>n2</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Value</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <RightBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>=Code.AlternateColor("White", Code.ReportResources.LightColor(), False)</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.19792in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox4">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox4</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox8">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox17">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox17</rd:DefaultName>
+                      <ZIndex>10</ZIndex>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <BackgroundColor>=Code.ReportResources.MediumColor()</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox7">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value />
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>=Code.ReportResources.MediumColor()</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=string.Format(Code.GetLocalString("LineItemResources", "RPT_RDL_Total_1"), Parameters!CurrencySymbol.Value)</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>=Code.ReportResources.MediumColor()</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox16">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Sum(Fields!LineItemValue.Value)</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontWeight>Bold</FontWeight>
+                                <Format>n2</Format>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <RightBorder>
+                          <Color>=Code.ReportResources.DarkColor()</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>=Code.ReportResources.MediumColor()</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.25in</Size>
+                <CellContents>
+                  <Textbox Name="textbox15">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value />
+                            <Style>
+                              <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                              <FontSize>8pt</FontSize>
+                              <FontWeight>Bold</FontWeight>
+                              <Color>=Code.ReportResources.HeaderColor()</Color>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>textbox10</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>=Code.ReportResources.DarkColor()</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <LeftBorder>
+                        <Color>=Code.ReportResources.DarkColor()</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </LeftBorder>
+                      <BackgroundColor>=Code.ReportResources.DarkColor()</BackgroundColor>
+                      <VerticalAlign>Bottom</VerticalAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.25in</Size>
+                <CellContents>
+                  <Textbox Name="textbox14">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Code.GetLocalString("LineItemResources", "RPT_RDL_Column_Reading_0")</Value>
+                            <Style>
+                              <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Color>=Code.ReportResources.HeaderColor()</Color>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>textbox10</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>=Code.ReportResources.DarkColor()</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BackgroundColor>=Code.ReportResources.DarkColor()</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.25in</Size>
+                <CellContents>
+                  <Textbox Name="textbox13">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=Code.GetLocalString("LineItemResources", "RPT_RDL_Column_Modifier_0")</Value>
+                            <Style>
+                              <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Color>=Code.ReportResources.HeaderColor()</Color>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>textbox10</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>=Code.ReportResources.DarkColor()</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <BackgroundColor>=Code.ReportResources.DarkColor()</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+            <TablixMember>
+              <TablixHeader>
+                <Size>0.25in</Size>
+                <CellContents>
+                  <Textbox Name="textbox10">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=string.Format(Code.GetLocalString("LineItemResources", "RPT_RDL_Column_Cost_1"), Parameters!CurrencySymbol.Value)</Value>
+                            <Style>
+                              <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                              <FontWeight>Bold</FontWeight>
+                              <Color>=Code.ReportResources.HeaderColor()</Color>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>textbox10</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <TopBorder>
+                        <Color>=Code.ReportResources.DarkColor()</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </TopBorder>
+                      <RightBorder>
+                        <Color>=Code.ReportResources.DarkColor()</Color>
+                        <Style>Solid</Style>
+                        <Width>1pt</Width>
+                      </RightBorder>
+                      <BackgroundColor>=Code.ReportResources.DarkColor()</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixHeader>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details" />
+            </TablixMember>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <RepeatColumnHeaders>true</RepeatColumnHeaders>
+        <RepeatRowHeaders>true</RepeatRowHeaders>
+        <DataSetName>LineItemResultSet</DataSetName>
+        <Top>1.98624in</Top>
+        <Left>0.02481in</Left>
+        <Height>0.94792in</Height>
+        <Width>7.90001in</Width>
+        <Visibility>
+          <Hidden>=IIF(CountRows("LineItemResultSet") &gt; 0,false,true)</Hidden>
+        </Visibility>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BottomBorder>
+            <Color>=Code.ReportResources.DarkColor()</Color>
+            <Style>Solid</Style>
+            <Width>1pt</Width>
+          </BottomBorder>
+        </Style>
+      </Tablix>
+      <Textbox Name="ReportTimeRange">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>
+                  =Code.DateRangeAssistant.DeserializeDateRange(
+                  Parameters!DateRange.Value,
+                  Parameters!Culture.Value,
+                  Parameters!UICulture.Value)
+                </Value>
+                <Style>
+                  <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Left>0.00916in</Left>
+        <Height>0.25in</Height>
+        <Width>7.9in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ReportUniqueID">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Code.GetGlobalString("ReportFooter", "ID") &amp; " " &amp; Code.GetUniqueID()</Value>
+                <Style>
+                  <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <Color>DarkGray</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <Top>3.0036in</Top>
+        <Left>0.02481in</Left>
+        <Height>0.25in</Height>
+        <Width>5in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Tablix Name="LineItemMetaDataTable">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>2.36758in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5.53242in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.3125in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox22">
+                      <CanGrow>true</CanGrow>
+                      <CanShrink>true</CanShrink>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!KeyLabel.Value</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>=Code.ReportResources.MediumColor()</BackgroundColor>
+                        <VerticalAlign>Top</VerticalAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>4pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox6">
+                      <CanGrow>true</CanGrow>
+                      <CanShrink>true</CanShrink>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ValueLabel.Value</Value>
+                              <Style>
+                                <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>=Code.ReportResources.LightColor()</BackgroundColor>
+                        <VerticalAlign>Top</VerticalAlign>
+                        <PaddingLeft>4pt</PaddingLeft>
+                        <PaddingRight>4pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details1" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>LineItemMetaData</DataSetName>
+        <Top>1.53069in</Top>
+        <Left>0.01563in</Left>
+        <Height>0.3125in</Height>
+        <Width>7.9in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Color>=Code.ReportResources.DarkColor()</Color>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Subreport Name="Subreport1">
+        <ReportName>LineItemDataWarningReport</ReportName>
+        <Parameters>
+          <Parameter Name="SubReportID">
+            <Value>=Code.GetUniqueID()</Value>
+          </Parameter>
+          <Parameter Name="Culture">
+            <Value>=Parameters!Culture.Value</Value>
+          </Parameter>
+          <Parameter Name="UICulture">
+            <Value>=Parameters!UICulture.Value</Value>
+          </Parameter>
+          <Parameter Name="ReportColours">
+            <Value>=Parameters!ReportColours.Value</Value>
+          </Parameter>
+        </Parameters>
+        <Top>0.43966in</Top>
+        <Left>0.01563in</Left>
+        <Height>0.97152in</Height>
+        <Width>7.9in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Subreport>
+    </ReportItems>
+    <Height>3.35083in</Height>
+    <Style />
+  </Body>
+  <Width>8.00002in</Width>
+  <Page>
+    <PageHeader>
+      <Height>1.2in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="ReportTitle">
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!Title.Value</Value>
+                  <Style>
+                    <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                    <FontSize>20pt</FontSize>
+                    <Color>=Code.ReportResources.DarkColor()</Color>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Left>2.6in</Left>
+          <Height>1in</Height>
+          <Width>5.34028in</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <VerticalAlign>Bottom</VerticalAlign>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="line1">
+          <Top>1.11389in</Top>
+          <Height>0in</Height>
+          <Width>8.00001in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+              <Width>2pt</Width>
+            </Border>
+          </Style>
+        </Line>
+        <Image Name="image1">
+          <Source>External</Source>
+          <Value>http://localhost/reporter/images/logo/default</Value>
+          <Sizing>Fit</Sizing>
+          <Height>1.04167in</Height>
+          <Width>2.60417in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>0.77778in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="ReportPageNumbers">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=String.Format(Code.GetGlobalString("ReportFooter", "Page"), Globals!PageNumber, Globals!TotalPages)</Value>
+                  <Style>
+                    <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Right</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.25in</Top>
+          <Left>5.75001in</Left>
+          <Height>0.25in</Height>
+          <Width>2.25001in</Width>
+          <Style>
+            <TopBorder>
+              <Style>None</Style>
+            </TopBorder>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="ReportGenerationTime">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>
+                    =Code.GetGlobalString("ReportFooter", "GeneratedOn") &amp;
+                    Format(CDate(Globals!ExecutionTime), Code.GetDatetimePattern())
+                  </Value>
+                  <Style>
+                    <FontFamily>=Code.GetLocalFont(Parameters!UICulture.Value.ToString())</FontFamily>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.25in</Top>
+          <Left>0.01563in</Left>
+          <Height>0.25in</Height>
+          <Width>5in</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <TopBorder>
+              <Style>None</Style>
+            </TopBorder>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+          </Style>
+        </Textbox>
+        <Line Name="line3">
+          <Top>0.18056in</Top>
+          <Height>0in</Height>
+          <Width>7.98437in</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+              <Width>2pt</Width>
+            </Border>
+          </Style>
+        </Line>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <InteractiveHeight>0in</InteractiveHeight>
+    <InteractiveWidth>8.5in</InteractiveWidth>
+    <LeftMargin>0.25in</LeftMargin>
+    <RightMargin>0.25in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="IONReportDataSource">
+      <DataSourceReference>IONReportDataSource</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>babf36e5-18b2-47f4-81f1-d1bf552b58fa</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="LineItemResultSet">
+      <Query>
+        <DataSourceName>IONReportDataSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="Title">
+            <Value>=Parameters!Title.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="ConfigurationName">
+            <Value>=Parameters!ViewDrivenDropDownList.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="ReportId">
+            <Value>=Code.GetUniqueID()</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="DateRange">
+            <Value>=Parameters!DateRange.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="EntitySelector">
+            <Value>=Parameters!SingleSource.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>ReportView_LineItemResultSet</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="LineItemLabel">
+          <DataField>LineItemLabel</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="LineItemValue">
+          <DataField>LineItemValue</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ReadingDisplay">
+          <DataField>ReadingDisplay</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ReadingRawValue">
+          <DataField>ReadingRawValue</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ModifierDisplay">
+          <DataField>ModifierDisplay</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ModifierRawValue">
+          <DataField>ModifierRawValue</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="LineItemMetaData">
+      <Query>
+        <DataSourceName>IONReportDataSource</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="Title">
+            <Value>=Parameters!Title.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="ConfigurationName">
+            <Value>=Parameters!ViewDrivenDropDownList.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="ReportId">
+            <Value>=Code.GetUniqueID()</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="DateRange">
+            <Value>=Parameters!DateRange.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="EntitySelector">
+            <Value>=Parameters!SingleSource.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>ReportView_LineItemMetaData</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="KeyLabel">
+          <DataField>KeyLabel</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="ValueLabel">
+          <DataField>ValueLabel</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="Title">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=Code.ReportResources.GetResourceString("IONReportResources.ReportLocalizerNames", "_BillingReports_BillingReport")</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Title</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SingleSource">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>{"SourceIdList":[3,2,1]}</Value>
+          <Value>@PreferencesSelection:HideAndSelectSecond</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Tenant</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="DateRange">
+      <DataType>String</DataType>
+      <Prompt>Reporting Period</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ViewDrivenDropDownList">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>@ContentView:ReportView_TariffList</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Rate</Prompt>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="Culture">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>en-us</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Culture</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="UICulture">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>en-us</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>UICulture</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportColours">
+      <DataType>String</DataType>
+      <Prompt>ReportColours</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CurrencySymbol">
+      <DataType>String</DataType>
+      <Prompt>CurrencySymbol</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>
+    ' Members
+    ' *************************************************************************
+    Private UniqueID As String
+    Private bOddRow As Boolean
+    Private m_DarkColour As String
+    Private m_MediumColour As String
+    Private m_LightColour As String
+    Private m_HeaderTextColour As String
+
+    ' End Members
+    '*************************************************************************
+
+    ' Properties
+    ' *************************************************************************
+
+    Public ReadOnly Property DarkColour() As String
+
+    Get
+    If m_DarkColour Is Nothing Then
+    SetColourScheme()
+    End If
+    Return m_DarkColour
+    End Get
+
+    End Property
+
+    Public ReadOnly Property MediumColour() As String
+
+    Get
+    If m_MediumColour Is Nothing Then
+    SetColourScheme()
+    End If
+    Return m_MediumColour
+    End Get
+
+    End Property
+
+    Public ReadOnly Property LightColour() As String
+
+    Get
+    If m_LightColour Is Nothing Then
+    SetColourScheme()
+    End If
+    Return m_LightColour
+    End Get
+
+    End Property
+
+    Public ReadOnly Property HeaderTextColour() As String
+
+    Get
+    If m_HeaderTextColour Is Nothing Then
+    SetColourScheme()
+    End If
+    Return m_HeaderTextColour
+    End Get
+
+    End Property
+
+    ' End Properties
+    ' *************************************************************************
+
+    ' Private Methods
+    ' *************************************************************************
+    Private Function SetColourScheme() As Boolean
+
+    m_HeaderTextColour = "White"
+
+    Dim allColours = Report.Parameters!ReportColours.Value
+    Dim colourArray(3) As String
+    colourArray = Split(allColours, ",")
+
+    m_DarkColour = colourArray(0)
+    m_MediumColour = colourArray(1)
+    m_LightColour = colourArray(2)
+
+    Return True
+    End Function
+
+    ' Display green-bar type color banding in detail rows
+    ' Call from BackGroundColor property of all detail row textboxes
+    ' Set Toggle True for first item, False for others.
+    Function AlternateColor(ByVal OddColor As String, _
+    ByVal EvenColor As String, ByVal Toggle As Boolean) As String
+    If Toggle Then bOddRow = Not bOddRow
+    If bOddRow Then
+    Return OddColor
+    Else
+    Return EvenColor
+    End If
+    End Function
+
+    ' End Private Methods
+    ' *************************************************************************
+
+    ' Public Methods
+    ' *************************************************************************
+    Private Const localResourceAssemblyName As String = "Modules.Reporting"
+    Private Const localResourceNameSpace As String = "Modules.Reporting.Resx"
+    Private Const globalResourceAssemblyName As String = "IONReportResources"
+
+
+    public Function GetGlobalString(ByVal resourcesName As String, ByVal myValue As String) As String
+    Return GetLocalizedString(globalResourceAssemblyName,  globalResourceAssemblyName, resourcesName, myValue)
+    End Function
+
+    public Function GetLocalString(ByVal resourcesName As String, ByVal myValue As String) As String
+    Return GetLocalizedString(localResourceAssemblyName ,  localResourceNameSpace , resourcesName, myValue)
+    End Function
+
+    public Function GetLocalizedString(ByVal assemblyName As String, ByVal resourceNameSpace As String, ByVal resourcesName As String, ByVal myValue As String) As String
+    Dim cultureString  As String
+    cultureString = Report.Parameters!UICulture.Value.ToString()
+    Dim cultureInfo As New System.Globalization.CultureInfo(cultureString)
+
+    Dim assembly As System.Reflection.Assembly
+    assembly = System.Reflection.Assembly.Load(assemblyName)
+
+    Dim rm As New  System.Resources.ResourceManager( resourceNameSpace &amp; "." &amp; resourcesName,  assembly)
+    Return rm.GetString(myValue, cultureInfo)
+    End Function
+
+    Public Function GetLocalFont(ByVal localUICulture As String) As String
+    Select Case localUICulture.ToLower()
+    Case "zh-cn"
+    GetLocalFont = "SimSun"
+    Case "zh-tw"
+    GetLocalFont = "MingLiu"
+    Case "ja"
+    GetLocalFont = "MS UI Gothic"
+    Case "ko"
+    GetLocalFont = "GulimChe"
+    Case Else
+    GetLocalFont = "Arial"
+    End Select
+    End Function
+
+    Public Function GetUniqueID() As String
+    If String.IsNullOrEmpty(UniqueID) Then
+    UniqueID = Guid.NewGuid().ToString()
+    End If
+    Return UniqueID
+    End Function
+
+    Public Function GetDatetimePattern() As String
+    Dim cultureString  As String
+    cultureString = Report.Parameters!Culture.Value.ToString()
+    Dim cultureInfo As New System.Globalization.CultureInfo(cultureString)
+
+    Return cultureInfo.DateTimeFormat.ShortDatePattern &amp; " " &amp; cultureInfo.DateTimeFormat.LongTimePattern
+    End Function
+
+    ' added individual functions to get the date pattern and time pattern separately
+    ' because we found a problem after the localization of strings was out of the question
+
+    Public Function GetDatePattern() As String
+    Dim cultureString  As String
+    cultureString = Report.Parameters!Culture.Value.ToString()
+    Dim cultureInfo As New System.Globalization.CultureInfo(cultureString)
+
+    Return cultureInfo.DateTimeFormat.ShortDatePattern
+    End Function
+
+    Public Function GetTimePattern() As String
+    Dim cultureString  As String
+    cultureString = Report.Parameters!Culture.Value.ToString()
+    Dim cultureInfo As New System.Globalization.CultureInfo(cultureString)
+
+    Return cultureInfo.DateTimeFormat.LongTimePattern
+    End Function
+
+    Public Function GetDatetimeMillisecondPattern() As String
+    Dim cultureString  As String
+    cultureString = Report.Parameters!Culture.Value.ToString()
+    Dim cultureInfo As New System.Globalization.CultureInfo(cultureString)
+
+    Dim strFormat As String
+    strFormat = cultureInfo.DateTimeFormat.ShortDatePattern &amp; " " &amp; cultureInfo.DateTimeFormat.LongTimePattern
+    if (Instr(strFormat.ToLower(), " tt") &gt; 0) then
+    strFormat = strFormat.Replace(" tt", cultureInfo.NumberFormat.NumberDecimalSeparator &amp; "fff tt")
+    else
+    strFormat = strFormat &amp; cultureInfo.NumberFormat.NumberDecimalSeparator &amp; "fff"
+    end if
+
+    return strFormat
+    End Function
+
+    Public Function FormatDatetimeMillisecond(ByVal dt As Datetime, ByVal millisecond As Integer) As String
+    Dim ms As New DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, millisecond)
+
+    Return ms.ToString(GetDatetimeMillisecondPattern())
+    End Function
+
+    ' End Public Methods
+    ' *************************************************************************
+  </Code>
+  <Language>=Parameters!Culture.Value</Language>
+  <CodeModules>
+    <CodeModule>IONReportResources, Version=6.0.241.0, Culture=neutral, PublicKeyToken=null</CodeModule>
+    <CodeModule>Reporting.Reports.IONSerializationAssistant, Version=6.0.739.0, Culture=neutral, PublicKeyToken=null</CodeModule>
+  </CodeModules>
+  <Classes>
+    <Class>
+      <ClassName>Reporting.Reports.IONSerializationAssistant.DateRangeAssistant</ClassName>
+      <InstanceName>DateRangeAssistant</InstanceName>
+    </Class>
+    <Class>
+      <ClassName>IONReportResources.ReportResources</ClassName>
+      <InstanceName>ReportResources</InstanceName>
+    </Class>
+  </Classes>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>fbedeb2b-c5d7-4fbf-8a66-70c3fb1ede82</rd:ReportID>
+</Report>
