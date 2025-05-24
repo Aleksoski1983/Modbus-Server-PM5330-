@@ -18,7 +18,20 @@ scaling_factor = 10**3
 energy = 0.0
 start_time = time.time()
 
+def get_local_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        # Doesn't have to be reachable, just used to get the outbound IP
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+    except Exception:
+        ip = "127.0.0.1"
+    finally:
+        s.close()
+    return ip
 
+
+server_ip_address = get_local_ip()
 print(f"[+]Info : IP Address for Modbus Server : {server_ip_address}")
 
 ModbusServer
